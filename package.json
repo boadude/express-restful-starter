@@ -1,0 +1,43 @@
+{
+  "name": "express-restful-starter",
+  "version": "1.0.0",
+  "description": "expressjs restfull starter",
+  "main": "server.js",
+  "scripts": {
+    "test": "./node_modules/.bin/mocha",
+    "start": "./node_modules/.bin/nodemon -w ./ --harmony_destructuring",
+    "db:tables:create": "node ./tasks/migrate.js"
+  },
+  "repository": {
+    "type": "",
+    "url": ""
+  },
+  "keywords": [
+    "restful",
+    "express",
+    "starter",
+    "boilerplate"
+  ],
+  "author": "Miguel Meza",
+  "license": "MIT",
+  "bugs": {
+    "url": ""
+  },
+  "dependencies": {
+    "body-parser": "^1.9.0",
+    "compression": "^1.5.2",
+    "errorhandler": "^1.4.3",
+    "express": "~4.9.0",
+    "method-override": "^2.3.5",
+    "morgan": "^1.6.1",
+    "mysql": "^2.10.2",
+    "sequelize": "^3.9.0"
+  },
+  "homepage": "",
+  "devDependencies": {
+    "chai": "^3.4.1",
+    "mocha": "^2.3.3",
+    "nodemon": "^1.7.0",
+    "superagent": "^1.4.0"
+  }
+}

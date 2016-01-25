@@ -1,0 +1,11 @@
+{
+  "node": true,
+  "esnext": true,
+  "globals":{
+    "autoload": false,
+    "describe": false,
+    "it": false,
+    "request": false,
+    "before": false
+  }
+}

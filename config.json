@@ -1,0 +1,12 @@
+{
+    "name": "CIMAKine",
+    "port": 1337,
+    "environment": "development",
+    "database":{
+      "server": "127.0.0.1",
+      "db": "todo",
+      "username": "root",
+      "password": "",
+      "dialect": "mysql"
+    }
+}

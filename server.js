@@ -1,23 +1,23 @@
 'use strict';
 
 require('./utils/autoload')();
-let config  = require('./config.json');
+let config = require('./config.json');
 
 let express = require('express');
-let http    = require('http');
+let http = require('http');
 
 let PORT = process.env.PORT || config.port || 3000;
 
-let Router  = autoload('app/Router');
-let app     = express();
-let server  = http.createServer(app);
+let Router = autoload('app/Router');
+let app = express();
+let server = http.createServer(app);
 
 /* MIDDLEWARE */
 require('./config/middleware')(app, express);
 
 /* ROUTES */
 Router.forEach(route => {
-  app.use(route.path, route.handler);
+  app.use(route.path, route.middleware, route.handler);
 });
 
 /* ERRORS */

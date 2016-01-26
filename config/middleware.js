@@ -1,12 +1,12 @@
 'use strict';
 
-let bodyParser     = require('body-parser');
+let bodyParser = require('body-parser');
 let methodOverride = require('method-override');
-let path           = require('path');
-let compression    = require('compression');
-let errorHandler   = require('errorHandler');
-let morgan         = require('morgan');
-let config         = require('../config.json');
+let path = require('path');
+let compression = require('compression');
+let errorHandler = require('errorHandler');
+let morgan = require('morgan');
+let config = require('../config.json');
 
 module.exports = function(app, express) {
 
@@ -14,8 +14,7 @@ module.exports = function(app, express) {
 
   if (environment == 'production') {
     app.use(compression());
-  }
-  else if (environment == 'development') {
+  } else if (environment == 'development') {
     app.use(errorHandler());
   }
 

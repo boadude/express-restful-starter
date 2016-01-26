@@ -30,20 +30,20 @@ Install
     <code>npm install</code>
 
  3. Edit the file *config.json* with your own settings:
-    <code>
+    ```json
     	{
-    	  "name": "MyAPP", // Name of your app
-    	  "port": 1347, // Port
-    	  "environment": "development", // Development, Production, etc.
+    	  "name": "MyAPP",
+    	  "port": 1347,
+    	  "environment": "development",
     	  "database": {
-    		    "server": "127.0.0.1", // Local DB Server
-    		    "db": "test", // Database
-    		    "username": "root", // Username
-    		    "password": "", // Password
-    		    "dialect": "mysql" // Dialect of SequalizeJS (SQL, PosgreSQL, etc)
+    		    "server": "127.0.0.1",
+    		    "db": "test",
+    		    "username": "root",
+    		    "password": "",
+    		    "dialect": "mysql"
     		  }
     	}
-    </code>
+    ```
 
 Start server
 ------------

@@ -9,8 +9,8 @@
     "db:tables:create": "node ./tasks/migrate.js"
   },
   "repository": {
-    "type": "",
-    "url": ""
+    "type": "git",
+    "url": "https://github.com/boadude/express-restful-starter"
   },
   "keywords": [
     "restful",
@@ -21,7 +21,7 @@
   "author": "Miguel Meza",
   "license": "MIT",
   "bugs": {
-    "url": ""
+    "url": "https://github.com/boadude/express-restful-starter/issues"
   },
   "dependencies": {
     "body-parser": "^1.9.0",
@@ -33,7 +33,7 @@
     "mysql": "^2.10.2",
     "sequelize": "^3.9.0"
   },
-  "homepage": "",
+  "homepage": "https://github.com/boadude/express-restful-starter",
   "devDependencies": {
     "chai": "^3.4.1",
     "mocha": "^2.3.3",

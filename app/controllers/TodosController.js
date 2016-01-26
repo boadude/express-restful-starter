@@ -1,7 +1,8 @@
 'use strict';
+
 let Todo = autoload('app/models/Todo');
 
-module.exports = {
+class TodoController {
 
   list(req, res) {
 
@@ -12,13 +13,18 @@ module.exports = {
       .catch(err => {
         console.error(err);
       });
-  },
-  
+  }
+
   create(req, res) {
-    let { text } = req.body;
+
+    let {
+      text
+    } = req.body;
 
     Todo
-      .create({ text })
+      .create({
+        text
+      })
       .then(() => {
         res.send('OK');
       })
@@ -26,4 +32,6 @@ module.exports = {
         console.error(err);
       });
   }
-};
+}
+
+module.exports = new TodoController();

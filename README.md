@@ -1,23 +1,55 @@
 # express-restful-starter
+
 ES6 + ExpressJS + SequalizeJS + Mocha + Chai + Superagent. Starter kit for make RESTful API in NodeJS.
+------------------------------------------------------------------------
 
-Every project need a good start. This starter kit have all you need to start a new project using NodeJS and ES6.
 
-If you need some kickstart in ES6, you can read here https://nodejs.org/en/docs/es6/.
+----------
 
-I will continue improving this project.
 
-## Install
+Every project need a good start. This **starter kit** have all you need to start a new project using **NodeJS** and **ES6** and many tools that you simply love!.
 
-To run this project you need NodeJS v4.
+This project use **ES6**, so if you are new in javascript world reading  [this](https://nodejs.org/en/docs/es6/)  can help you.
 
-- `git clone https://github.com/boadude/express-restful-starter.git`
-- `npm install`
+Everyone can collaborate with this project just fork and push changes back.
 
-To start a lift the project.
+Requirement
+-----------
 
-- `npm start`
+ 1. NodeJS v4
 
-For test:
+Install
+-------
 
-- `npm test`
+ 1. First clone this repository.
+
+    <code>git clone https://github.com/boadude/express-restful-starter.git</code>
+
+ 2. Download all dependencies.
+
+    <code>npm install</code>
+
+ 3. Edit the file *config.json* with your own settings:
+    <code>
+    	{
+    	  "name": "MyAPP", // Name of your app
+    	  "port": 1347, // Port
+    	  "environment": "development", // Development, Production, etc.
+    	  "database": {
+    		    "server": "127.0.0.1", // Local DB Server
+    		    "db": "test", // Database
+    		    "username": "root", // Username
+    		    "password": "", // Password
+    		    "dialect": "mysql" // Dialect of SequalizeJS (SQL, PosgreSQL, etc)
+    		  }
+    	}
+    </code>
+
+Start server
+------------
+
+<code>npm start</code>
+
+Testing
+-------
+<code>npm test</code>

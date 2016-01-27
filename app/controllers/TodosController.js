@@ -33,6 +33,10 @@ class TodoController {
       console.error(err);
     });
   }
+
+  index(req, res){
+    res.send("I'm OK.");
+  }
 }
 
 module.exports = new TodoController();

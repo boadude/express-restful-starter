@@ -11,5 +11,6 @@ let router = express.Router();
 
 router.get('/', Controller.list);
 router.post('/', Controller.create);
+router.get('/test', Controller.index);
 
 module.exports = router;

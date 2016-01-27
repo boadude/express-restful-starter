@@ -1,36 +1,37 @@
 'use strict';
 
-let Todo = autoload('app/models/Todo');
+let TodosServices = autoload('./app/services/TodosService');
 
 class TodoController {
 
   list(req, res) {
 
-    Todo.findAll()
-      .then(todos => {
-        res.json(todos);
-      })
-      .catch(err => {
-        console.error(err);
-      });
+    let query = TodosServices.listAll();
+
+    query.then(todos => {
+      res.json(todos);
+    });
+
+    query.catch(err => {
+      console.error(err);
+    });
   }
 
   create(req, res) {
 
-    let {
-      text
-    } = req.body;
+    let params = {
+      text: req.body.texto
+    };
 
-    Todo
-      .create({
-        text
-      })
-      .then(() => {
-        res.send('OK');
-      })
-      .catch(err => {
-        console.error(err);
-      });
+    let query = TodosServices.create(params);
+
+    query.then(() => {
+      res.send('ok');
+    });
+
+    query.catch((err) => {
+      console.error(err);
+    });
   }
 }
 

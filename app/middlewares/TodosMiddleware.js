@@ -1,6 +1,6 @@
 'use strict';
 
-class TodoMiddleware {
+let middleware = {
 
   checkAnything(req, res, next) {
 
@@ -11,7 +11,7 @@ class TodoMiddleware {
         error: "Don't pass, middleware is here."
       });
     }
-  }
+  },
 
   checkAnythingTwo(req, res, next) {
 
@@ -23,6 +23,6 @@ class TodoMiddleware {
       });
     }
   }
-}
+};
 
-module.exports = new TodoMiddleware();
+module.exports = middleware;

@@ -2,7 +2,7 @@
 
 let TodosServices = autoload('./app/services/TodosService');
 
-class TodoController {
+let controller =  {
 
   list(req, res) {
 
@@ -15,7 +15,7 @@ class TodoController {
     query.catch(err => {
       console.error(err);
     });
-  }
+  },
 
   create(req, res) {
 
@@ -32,11 +32,11 @@ class TodoController {
     query.catch((err) => {
       console.error(err);
     });
-  }
+  },
 
   index(req, res){
     res.send("I'm OK.");
   }
-}
+};
 
-module.exports = new TodoController();
+module.exports = controller;

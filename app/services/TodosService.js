@@ -2,18 +2,18 @@
 
 let Todo = autoload('app/models/Todo');
 
-class TodoServices {
+let service = {
 
   listAll() {
 
     return Todo.findAll();
-  }
+  },
 
   create(params) {
 
     return Todo
       .create(params);
   }
-}
+};
 
-module.exports = new TodoServices();
+module.exports = service;

@@ -1,6 +1,6 @@
 # express-restful-starter
 
-ES6 + ExpressJS + SequalizeJS + Mocha + Chai + Superagent. Starter kit for make RESTful API in NodeJS.
+ES6 + ExpressJS + SequalizeJS + Mocha + Chai + Superagent + PM2. Starter kit for make RESTful API in NodeJS.
 ------------------------------------------------------------------------
 
 
@@ -45,7 +45,12 @@ Install
     	}
     ```
 
-Start server
+Start *development* server
+------------
+
+<code>npm run-script dev</code>
+
+Start *production* server
 ------------
 
 <code>npm start</code>

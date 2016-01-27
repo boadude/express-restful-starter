@@ -39,4 +39,4 @@ app.use(function(err, req, res, next) {
 
 /* START SERVER */
 server.listen(PORT);
-console.log(`Server ${config.name} started on 127.0.0.1:${PORT}\n`);
+console.log('Server ' + config.name + ' started on 127.0.0.1:' + PORT + '\n');

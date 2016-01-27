@@ -6,7 +6,7 @@ let chai = require('chai');
 let expect = chai.expect;
 let assert = chai.assert;
 
-const URI = `http://127.0.0.1:${config.port}`;
+const URI = 'http://127.0.0.1:' + config.port;
 
 describe('Todos :', () => {
 
@@ -16,7 +16,7 @@ describe('Todos :', () => {
 
     before((done) => {
       request
-        .get(`${URI}/todos`)
+        .get(URI + '/todos')
         .end(function(err, res) {
           response = res;
           done();

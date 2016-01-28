@@ -2,7 +2,7 @@
 
 let middleware = {
 
-  checkAnything(req, res, next) {
+  checkAnything: function(req, res, next) {
 
     if ("Hola" === "Hola") {
       next();
@@ -13,7 +13,7 @@ let middleware = {
     }
   },
 
-  checkAnythingTwo(req, res, next) {
+  checkAnythingTwo: function(req, res, next) {
 
     if ("Miguel" === "Miguel") {
       next();

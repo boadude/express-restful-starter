@@ -5,8 +5,8 @@
   "main": "server.js",
   "scripts": {
     "test": "./node_modules/.bin/mocha",
-    "start": "./node_modules/.bin/pm2 start server.js -i 0",
-    "dev": "./node_modules/.bin/nodemon -w ./ --harmony_destructuring",
+    "start": "./node_modules/.bin/pm2 start --node-args='--harmony' server.js -i 0",
+    "dev": "./node_modules/.bin/nodemon -w ./ --harmony",
     "db:tables:create": "node ./tasks/migrate.js"
   },
   "repository": {

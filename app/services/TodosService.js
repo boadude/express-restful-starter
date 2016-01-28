@@ -4,12 +4,12 @@ let Todo = autoload('app/models/Todo');
 
 let service = {
 
-  listAll() {
+  listAll: function() {
 
     return Todo.findAll();
   },
 
-  create(params) {
+  create: function(params) {
 
     return Todo
       .create(params);

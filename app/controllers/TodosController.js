@@ -4,7 +4,7 @@ let TodosServices = autoload('./app/services/TodosService');
 
 let controller =  {
 
-  list(req, res) {
+  list: function(req, res) {
 
     let query = TodosServices.listAll();
 
@@ -17,7 +17,7 @@ let controller =  {
     });
   },
 
-  create(req, res) {
+  create: function(req, res) {
 
     let params = {
       text: req.body.texto
@@ -34,7 +34,7 @@ let controller =  {
     });
   },
 
-  index(req, res){
+  index: function(req, res){
     res.send("I'm OK.");
   }
 };

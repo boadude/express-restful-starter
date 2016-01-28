@@ -4,7 +4,7 @@ let bodyParser = require('body-parser');
 let methodOverride = require('method-override');
 let path = require('path');
 let compression = require('compression');
-let errorHandler = require('errorHandler');
+let errorHandler = require('errorhandler');
 let morgan = require('morgan');
 let config = require('../config.json');
 

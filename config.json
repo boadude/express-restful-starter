@@ -1,6 +1,6 @@
 {
   "name": "MyAPP",
-  "port": 1347,
+  "port": 1337,
   "environment": "development",
   "database": {
     "server": "127.0.0.1",

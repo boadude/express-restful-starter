@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "test": "./node_modules/.bin/mocha",
-    "start": "./node_modules/.bin/nodemon -w ./ --harmony",
+    "start": "node server.js",
     "dev": "./node_modules/.bin/nodemon -w ./ --harmony",
     "db:tables:create": "node ./tasks/migrate.js"
   },
@@ -25,20 +25,22 @@
     "url": "https://github.com/boadude/express-restful-starter/issues"
   },
   "dependencies": {
+    "bluebird": "^3.1.5",
     "body-parser": "^1.9.0",
     "compression": "^1.5.2",
     "errorhandler": "^1.4.3",
     "express": "~4.9.0",
+    "lazy.js": "^0.4.2",
     "method-override": "^2.3.5",
     "morgan": "^1.6.1",
     "mysql": "^2.10.2",
     "nodemon": "^1.8.1",
-    "pm2": "^1.0.0",
     "sequelize": "^3.9.0"
   },
   "homepage": "https://github.com/boadude/express-restful-starter",
   "devDependencies": {
     "chai": "^3.4.1",
+    "chai-http": "^1.0.0",
     "mocha": "^2.3.3",
     "superagent": "^1.4.0"
   }

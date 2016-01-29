@@ -2,7 +2,6 @@
 
 let TodosServices = autoload('./app/services/TodosService');
 let Promises = require("bluebird");
-let _ = require("lazy.js");
 
 let controller = {
 

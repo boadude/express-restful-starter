@@ -59,29 +59,55 @@ describe('Todos :', () => {
   it('Should FIND a SINGLE Todos on /todos/:id GET', (done) => {
 
     chai.request(URI)
-      .get(url + '/' + idTodoRecord)
+      .post('/jwt')
       .end(function(err, res) {
         expect(res).to.have.status(200);
         expect(res).to.be.json;
-        expect(res.body).to.have.all.keys('id', 'text');
-        expect(res.body.text).to.be.a('string');
+        expect(res.body).to.have.all.keys('token');
+        expect(res.body.token).to.be.a('string');
 
-        done();
+        let token = res.body.token;
+
+        chai.request(URI)
+          .get(url + '/' + idTodoRecord)
+          .set('authorization', 'Bearer ' + token)
+          .end(function(err, res) {
+            expect(res).to.have.status(200);
+            expect(res).to.be.json;
+            expect(res.body).to.have.all.keys('id', 'text');
+            expect(res.body.text).to.be.a('string');
+
+            done();
+          });
+
       });
   });
 
   it('Should NOT FIND a SINGLE Todos on /todos/:id GET', (done) => {
 
     chai.request(URI)
-      .get(url + '/XXX')
+      .post('/jwt')
       .end(function(err, res) {
-        expect(res).to.have.status(404);
+        expect(res).to.have.status(200);
         expect(res).to.be.json;
-        expect(res.body).to.have.all.keys('text');
-        expect(res.body.text).to.be.a('string');
-        expect(res.body.text).to.equal('Not found');
+        expect(res.body).to.have.all.keys('token');
+        expect(res.body.token).to.be.a('string');
 
-        done();
+        let token = res.body.token;
+
+        chai.request(URI)
+          .get(url + '/XXX')
+          .set('authorization', 'Bearer ' + token)
+          .end(function(err, res) {
+            expect(res).to.have.status(404);
+            expect(res).to.be.json;
+            expect(res.body).to.have.all.keys('text');
+            expect(res.body.text).to.be.a('string');
+            expect(res.body.text).to.equal('Not found');
+
+            done();
+          });
+
       });
   });
 

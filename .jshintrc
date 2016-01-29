@@ -1,6 +1,7 @@
 {
   "node": true,
   "esnext": true,
+  "mocha": true,
   "globals":{
     "autoload": false,
     "describe": false,

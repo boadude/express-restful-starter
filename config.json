@@ -1,7 +1,8 @@
 {
   "name": "MyAPP",
-  "port": 1347,
+  "port": 1337,
   "environment": "development",
+  "secret": "H1Th3r3Y0uGuys!!!",
   "database": {
     "server": "127.0.0.1",
     "db": "test",

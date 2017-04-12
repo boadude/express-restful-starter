@@ -29,9 +29,9 @@
     "body-parser": "^1.9.0",
     "compression": "^1.5.2",
     "errorhandler": "^1.4.3",
-    "express": "~4.9.0",
-    "express-jwt": "^3.3.0",
-    "jsonwebtoken": "^5.5.4",
+    "express": "~4.15.2",
+    "express-jwt": "^5.1.0",
+    "jsonwebtoken": "^7.3.0",
     "method-override": "^2.3.5",
     "morgan": "^1.6.1",
     "mysql": "^2.10.2",
@@ -41,8 +41,8 @@
   "homepage": "https://github.com/boadude/express-restful-starter",
   "devDependencies": {
     "chai": "^3.4.1",
-    "chai-http": "^1.0.0",
-    "mocha": "^2.3.3",
-    "superagent": "^1.4.0"
+    "chai-http": "^3.0.0",
+    "mocha": "^3.2.0",
+    "superagent": "^3.5.2"
   }
 }

@@ -36,7 +36,7 @@
     "morgan": "^1.6.1",
     "mysql": "^2.10.2",
     "nodemon": "^1.8.1",
-    "sequelize": "^3.9.0"
+    "sequelize": "^3.34.0"
   },
   "homepage": "https://github.com/boadude/express-restful-starter",
   "devDependencies": {
